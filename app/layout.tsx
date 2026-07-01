@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "Orivox | Coming Soon",
   description:
     "Orivox helps businesses build, launch, and scale through innovative technology, thoughtful design, and strategic branding.",
+  icons: {
+    icon: "/orivox-icon.svg",
+    shortcut: "/orivox-icon.svg",
+    apple: "/orivox-icon.svg",
+  },
 };
 
 export default function RootLayout({

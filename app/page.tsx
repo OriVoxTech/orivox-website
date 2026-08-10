@@ -9,10 +9,12 @@ import { Process } from "@/components/home/Process";
 import { SelectedWork } from "@/components/home/SelectedWork";
 import { Services } from "@/components/home/Services";
 import { WhyOrivox } from "@/components/home/WhyOrivox";
+import { HashScroller } from "@/components/utils/HashScroller";
 
 export default function Home() {
   return (
     <main>
+      <HashScroller />
       <Navbar />
       <Hero />
       <BrandRail />

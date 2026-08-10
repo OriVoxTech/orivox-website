@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navigation } from "@/data/site";
+import { servicesIndex } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 
 export function Navbar() {
@@ -24,7 +25,10 @@ export function Navbar() {
       <button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Close menu" : "Open menu"}><span /><span /></button>
     </Container>
     <div id="mobile-menu" className={`mobile-menu ${open ? "mobile-menu--open" : ""}`} aria-hidden={!open}>
-      <nav aria-label="Mobile navigation">{navigation.map((item, index) => <Link key={item.label} href={item.href} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}><small>0{index + 1}</small>{item.label}</Link>)}</nav>
+      <nav aria-label="Mobile navigation">{navigation.map((item, index) => <div key={item.label} className={item.label === "Services" ? "mobile-menu__group" : ""}>
+        <Link href={item.href} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}><small>0{index + 1}</small>{item.label}</Link>
+        {item.label === "Services" ? <div className="mobile-menu__sub">{servicesIndex.map((service) => <Link key={service.slug} href={`/services/${service.slug}`} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>{service.title}</Link>)}</div> : null}
+      </div>)}</nav>
       <a href="mailto:hello@orivox.online" tabIndex={open ? 0 : -1}>hello@orivox.online ↗</a>
     </div>
   </header>;

@@ -4,6 +4,7 @@ export type Project = {
   category: string;
   type: string;
   description: string;
+  image?: string;
   featured: boolean;
   realProject: boolean;
   year: string;
@@ -16,13 +17,13 @@ export const projects: Project[] = [
     title: "Dominion Well",
     slug: "dominion-well",
     category: "Healthcare / Digital Experience",
-    type: "Real Orivox client project",
+    type: "Web Experience",
     description: "A modern digital healthcare platform designed to make it easier for patients to discover healthcare services and connect with medical professionals.",
     featured: true,
     realProject: true,
     year: "2026",
-    technologies: [],
-    caseStudyUrl: "/work/dominion-well",
+    technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Redux", "NestJS", "MongoDB"],
+    caseStudyUrl: "https://dominionwell.com",
   },
   {
     title: "Digital Product",

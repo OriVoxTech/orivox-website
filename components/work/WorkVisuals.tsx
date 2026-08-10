@@ -1,11 +1,30 @@
 export function DominionVisual({ compact = false }: { compact?: boolean }) {
-  return <div className={`dominion-visual ${compact ? "dominion-visual--compact" : ""}`} aria-label="Abstract browser mockup for the Dominion Well digital healthcare experience">
+  return <div className={`dominion-visual ${compact ? "dominion-visual--compact" : ""}`} aria-label="Dominion Well healthcare platform experience mockup">
     <div className="dominion-browser">
-      <div className="dominion-browser__bar"><i /><i /><i /><span>dominionwell.health</span></div>
+      <div className="dominion-browser__bar">
+        <span className="dominion-browser__dots"><i /><i /><i /></span>
+        <span className="dominion-browser__address">dominionwell.com</span>
+      </div>
       <div className="dominion-browser__body">
-        <div className="dominion-browser__copy"><small>Healthcare platform</small><strong>Find care with more clarity.</strong><p>Services, professionals and access points brought into one digital experience.</p></div>
-        <div className="dominion-browser__panel"><span /><span /><span /></div>
-        <div className="dominion-browser__grid"><i /><i /><i /><i /></div>
+        <div className="dominion-browser__content">
+          <div className="dominion-browser__label">Better care begins with the right connection.</div>
+          <h3>Healthcare, made clearer.</h3>
+          <p>Find verified specialists, book appointments and manage care in one calm experience.</p>
+        </div>
+        <div className="dominion-browser__stack">
+          <div className="dominion-card dominion-card--primary">
+            <small>Appointments</small>
+            <strong>Easy to manage</strong>
+          </div>
+          <div className="dominion-card">
+            <small>Care history</small>
+            <strong>Always together</strong>
+          </div>
+          <div className="dominion-card domineon-card--featured">
+            <small>Next step</small>
+            <strong>Choose a doctor and a convenient time</strong>
+          </div>
+        </div>
       </div>
     </div>
   </div>;

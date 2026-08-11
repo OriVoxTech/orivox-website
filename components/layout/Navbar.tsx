@@ -19,7 +19,7 @@ export function Navbar() {
 
   return <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
     <Container className="navbar__inner">
-      <Link href="/" aria-label="Orivox home" className="navbar__logo"><Image src="/Orivox Main Logo White.svg" alt="Orivox" width={1071} height={233} priority /></Link>
+      <Link href="/" aria-label="Orivox home" className="navbar__logo"><Image src="/Orivox Main Logo 1.svg" alt="Orivox" width={1071} height={233} priority /></Link>
       <nav className="navbar__links" aria-label="Main navigation">{navigation.map((item) => <Link key={item.label} href={item.href}>{item.label}</Link>)}</nav>
       <Link href="/#contact" className="navbar__cta">Start a project <span aria-hidden="true">↗</span></Link>
       <button className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Close menu" : "Open menu"}><span /><span /></button>

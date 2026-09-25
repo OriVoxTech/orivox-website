@@ -1,6 +1,5 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { dominionWell } from "@/data/projects";
 import { DominionVisual } from "./WorkVisuals";
 
 export function DominionCaseStudy() {

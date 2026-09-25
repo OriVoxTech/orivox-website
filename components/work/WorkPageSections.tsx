@@ -5,10 +5,16 @@ import { DominionVisual, ExplorationVisual } from "./WorkVisuals";
 
 export function WorkHero() {
   return <section className="work-page-hero section">
+    <div className="work-page-hero__rings" aria-hidden="true"><i /><i /><i /></div>
     <Container className="work-page-hero__inner">
-      <p className="eyebrow"><span />Selected work</p>
-      <h1>Thoughtful work.<br /><em>Built with intent.</em></h1>
-      <p>We keep the portfolio focused on the work that best reflects our standards, clarity and product thinking.</p>
+      <div className="work-page-hero__copy">
+        <p className="eyebrow"><span />Selected work</p>
+        <h1>Thoughtful work.<br /><em>Built with intent.</em></h1>
+      </div>
+      <div className="work-page-hero__footer">
+        <p>We keep the portfolio focused on the work that best reflects our standards, clarity and product thinking.</p>
+        <div><span><small>Focus</small>Products, brands and platforms</span><span><small>Approach</small>Strategy through delivery</span></div>
+      </div>
     </Container>
   </section>;
 }
@@ -58,8 +64,8 @@ export function Explorations() {
 
 export function WorkCTA() {
   return <section className="work-cta section"><Container>
-    <p className="eyebrow reveal"><span />A curated portfolio</p>
-    <h2 className="reveal">We do not need a huge portfolio<br /><em>to demonstrate quality.</em></h2>
-    <div className="work-cta__bottom reveal"><p>Orivox is building a portfolio with care — curating the work that reflects the standard, ambition and clarity we bring to digital products and experiences.</p><Button href="mailto:hello@orivox.online">Start a project</Button></div>
+    <p className="eyebrow reveal"><span />Build with Orivox</p>
+    <h2 className="reveal">Your next project could be<br /><em>the next story.</em></h2>
+    <div className="work-cta__bottom reveal"><p>Bring us the idea, challenge or ambition. We’ll connect strategy, design and technology to move it forward.</p><Button href="mailto:hello@orivox.online">Start a project</Button></div>
   </Container></section>;
 }

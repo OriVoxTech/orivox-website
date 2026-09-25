@@ -20,7 +20,7 @@ export function DominionVisual({ compact = false }: { compact?: boolean }) {
             <small>Care history</small>
             <strong>Always together</strong>
           </div>
-          <div className="dominion-card domineon-card--featured">
+          <div className="dominion-card dominion-card--featured">
             <small>Next step</small>
             <strong>Choose a doctor and a convenient time</strong>
           </div>
